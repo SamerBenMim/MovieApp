@@ -8,7 +8,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import { ModeNight } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux/es/exports';
+import { change, resetSearch } from '../Redux/Reducers/searchReducer';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -52,6 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Navbar({ setMode, mode }) {
   const [open, setOpen] = useState(false);
+  const dispatch = useDispatch();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -109,6 +111,7 @@ export default function Navbar({ setMode, mode }) {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              onChange={e => dispatch(change(e.target.value))}
             />
           </Search>
         </Toolbar>

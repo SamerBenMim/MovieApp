@@ -17,7 +17,7 @@ const MyCard = ({name,date,original_language,vote_average,img}) => {
 >
   <CardMedia 
     component="img"
-    image=  {`https://image.tmdb.org/t/p/original/${img} `} 
+    image=  {`https://image.tmdb.org/t/p/original${img} `} 
     height="300px"
     alt="random"
   />
