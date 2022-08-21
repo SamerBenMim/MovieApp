@@ -4,7 +4,7 @@ import Description from '../Description'
 const Movies = () => {
   return (
     <>
-    <Description />
+    <Description Shows={false} />
     </>
   )
 }

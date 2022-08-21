@@ -6,7 +6,7 @@ import {Favorite} from '@mui/icons-material'
 
 import React from 'react'
 import CircularStatic from './Utils/CircularProgress';
-const MyCard = ({name,date,original_language,vote_average}) => {
+const MyCard = ({name,date,original_language,vote_average,img}) => {
   return (
     <Grid item key={"card"} xs={12} sm={6} md={4} sx={{ position:"relative"}}>
     <IconButton aria-label="add to favorites" sx={{position:"absolute", right:"0"}}>
@@ -17,11 +17,7 @@ const MyCard = ({name,date,original_language,vote_average}) => {
 >
   <CardMedia 
     component="img"
-    sx={{
-        // 16:9
-        // pt: '56.25%',
-      }}
-    image="https://source.unsplash.com/random" 
+    image=  {`https://image.tmdb.org/t/p/original/${img} `} 
     height="300px"
     alt="random"
   />
@@ -33,11 +29,9 @@ const MyCard = ({name,date,original_language,vote_average}) => {
     {date} ( {(original_language=="en")?"english":"frensh"} )
     </Typography>
   </CardContent>
-  <CardActions sx={{justifyContent:"space-between"}}>
+  <CardActions sx={{justifyContent:"space-between",cursor: "pointer" }}>
     <Button size="small">View</Button>
     <CircularStatic value={vote_average}  />
-
- 
   </CardActions>
 </Card>
 </Grid>

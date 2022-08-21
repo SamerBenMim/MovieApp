@@ -24,8 +24,8 @@ function App() {
   });
   return (
     <ThemeProvider  theme={theme}>
-      <Navbar setMode={setMode}  mode={mode}/>
       <Router>
+      <Navbar setMode={setMode}  mode={mode}/>
       <Routes>
           <Route exact path="/TvShows" element={<Tv/>}/>
           <Route exact path="/Movies" element={<Movies/>}/>
@@ -33,8 +33,7 @@ function App() {
           <Route exact path="/tvshow" element={<TVShow/>}/>
         </Routes>
     </Router>
- 
-    </ThemeProvider>
+  </ThemeProvider>
 
   );
 }

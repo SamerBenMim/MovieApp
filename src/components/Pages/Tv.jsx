@@ -5,7 +5,7 @@ import Main from '../Main'
 
 const Tv = () => {
     return (<>
-        <Description />
+        <Description  Shows={true}/>
         <Main />
         <Footer />
     </>
