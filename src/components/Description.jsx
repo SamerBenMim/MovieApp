@@ -1,8 +1,10 @@
 import { Button, Typography } from '@mui/material'
 import { Box, Container, Stack } from '@mui/system'
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Description = () => {
+    const [Shows, setShows] = useState(true)
   return (
     <Box
           sx={{
@@ -31,8 +33,8 @@ const Description = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">TV Shows 2022</Button>
-              <Button variant="outlined">MOVIES 2022</Button>
+              <Button variant={Shows?"contained":"outlined"} onClick={()=>{setShows(true)}}> <Link  to='/TvShows'>TV Shows 2022</Link> </Button>
+              <Button variant={Shows?"outlined":"contained"}onClick={()=>{setShows(false)}}><Link  to='/movies'>MOVIES 2022</Link> </Button>
             </Stack>
           </Container>
         </Box>

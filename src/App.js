@@ -5,9 +5,16 @@ import Description from './components/Description';
 import Main from './components/Main';
 import { useState } from 'react';
 import Footer from './components/Footer';
-
-
-
+import Movies from './components/Pages/Movies';
+import Favourites from './components/Pages/Favourites';
+import TVShow from './components/Pages/TVShow';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  
+} from "react-router-dom";
+import Tv from './components/Pages/Tv';
 function App() {
   const [mode, setMode] =useState("dark")
   const theme = createTheme({
@@ -18,9 +25,15 @@ function App() {
   return (
     <ThemeProvider  theme={theme}>
       <Navbar setMode={setMode}  mode={mode}/>
-      <Description/>
-      <Main/>
-      <Footer/>
+      <Router>
+      <Routes>
+          <Route exact path="/TvShows" element={<Tv/>}/>
+          <Route exact path="/Movies" element={<Movies/>}/>
+          <Route exact path="/favourites" element={<Favourites/>}/>
+          <Route exact path="/tvshow" element={<TVShow/>}/>
+        </Routes>
+    </Router>
+ 
     </ThemeProvider>
 
   );
