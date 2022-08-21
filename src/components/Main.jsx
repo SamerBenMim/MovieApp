@@ -6,6 +6,7 @@ import MyCard from './card';
 
 import React from 'react'
 import CircularStatic from './Utils/CircularProgress';
+import Pagination from './Utils/Pagination';
 
 const Main = () => {
   return (
@@ -19,6 +20,8 @@ const Main = () => {
   
   {/* } */}
  </Grid>
+ <Pagination cout={10}></Pagination>
+
 </Container>
   )
 }

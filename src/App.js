@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Description from './components/Description';
 import Main from './components/Main';
 import { useState } from 'react';
+import Footer from './components/Footer';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Navbar setMode={setMode}  mode={mode}/>
       <Description/>
       <Main/>
+      <Footer/>
     </ThemeProvider>
 
   );
