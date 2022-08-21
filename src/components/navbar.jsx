@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import CameraIcon from '@mui/icons-material/PhotoCamera';
 import Toolbar from '@mui/material/Toolbar';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
@@ -37,7 +37,6 @@ const Search = styled('div')(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create('width'),
       width: '100%',
@@ -51,17 +50,41 @@ const Search = styled('div')(({ theme }) => ({
   }));
   
   export default function Navbar() {
+    const [open, setOpen] = useState(false);
     return (
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar  >
             <IconButton 
+              onClick= {e=>setOpen(!open)}
+              cursor="pointer"
               size="large"
               edge="start"
               color="inherit"
               aria-label="open drawer"
               sx={{ mr: 2 }}
             >
+    <Menu sx={{marginTop:4,cursor  : "pointer"}} 
+        
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        // anchorEl={anchorEl}
+        open={open}
+        cursor="pointer"
+        onClose={()=>{setOpen(false)}}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu>
             <MenuIcon />
             </IconButton>
             <Typography

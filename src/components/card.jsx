@@ -30,7 +30,7 @@ const MyCard = () => {
     The Sandman
     </Typography>
     <Typography variant='h6' color="gray" fontSize={14}>
-    Aug 02, 2022
+    Aug 02, 2022 ( English )
     </Typography>
   </CardContent>
   <CardActions sx={{justifyContent:"space-between"}}>
