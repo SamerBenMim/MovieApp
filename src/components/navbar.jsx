@@ -87,7 +87,7 @@ const Search = styled('div')(({ theme }) => ({
         <ListItemIcon>
          <ModeNight/>
          </ListItemIcon>
-         <Switch defaultChecked onChange={e=>{setOpen(true);setMode(mode=="light"?"dark" : "light")}} />
+         <Switch checked={mode=="dark"} onChange={e=>{setOpen(true);setMode(mode=="light"?"dark" : "light")}} />
         </MenuItem>
       </Menu>
             <MenuIcon />
