@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import CameraIcon from '@mui/icons-material/PhotoCamera';
 import Toolbar from '@mui/material/Toolbar';
-import { Box, IconButton, Menu, MenuItem, Typography } from '@mui/material';
+import { Box, IconButton, ListItemIcon, Menu, MenuItem, Switch, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
+import { ModeNight } from '@mui/icons-material';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -49,7 +50,7 @@ const Search = styled('div')(({ theme }) => ({
     },
   }));
   
-  export default function Navbar() {
+  export default function Navbar({setMode,mode}) {
     const [open, setOpen] = useState(false);
     return (
       <Box sx={{ flexGrow: 1 }}>
@@ -68,7 +69,6 @@ const Search = styled('div')(({ theme }) => ({
         
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        // anchorEl={anchorEl}
         open={open}
         cursor="pointer"
         onClose={()=>{setOpen(false)}}
@@ -82,8 +82,13 @@ const Search = styled('div')(({ theme }) => ({
         }}
       >
         <MenuItem >Profile</MenuItem>
-        <MenuItem >My account</MenuItem>
-        <MenuItem >Logout</MenuItem>
+        <MenuItem >My Favourites</MenuItem>
+        <MenuItem >
+        <ListItemIcon>
+         <ModeNight/>
+         </ListItemIcon>
+         <Switch defaultChecked onChange={e=>{setOpen(true);setMode(mode=="light"?"dark" : "light")}} />
+        </MenuItem>
       </Menu>
             <MenuIcon />
             </IconButton>

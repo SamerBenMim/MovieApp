@@ -19,12 +19,11 @@ const Description = () => {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+               TV Shows & Movies 
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don&apos;t simply skip over it entirely.
+             There is a lot of TV shows and movies that you can discover on our website.
+             Here is a list of the most popular TV shows and movies. 
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -32,8 +31,8 @@ const Description = () => {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <Button variant="contained">TV Shows 2022</Button>
+              <Button variant="outlined">MOVIES 2022</Button>
             </Stack>
           </Container>
         </Box>
