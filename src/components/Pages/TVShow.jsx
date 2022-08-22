@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom'
 import { getTvShowById } from '../../API/getMovies'
 import Loader from '../Utils/Loader';
 
-
+//this is the component that shows the details of a movie/tvShow
 const Movies = () => {
   const [show, setshow] = useState(null)
   const location = useLocation()

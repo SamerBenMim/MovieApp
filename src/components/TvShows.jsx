@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux/es/exports';
 import { setShows } from '../Redux/Reducers/showsReducer';
 import Loader from './Utils/Loader';
-const Main = ({getShows}) => {
+const Main = ({ getShows }) => {
     const [movies, setMovies] = useState([]);
     const { searchInput } = useSelector((state) => state.search)
     const { page } = useSelector((state) => state.pagination)
@@ -23,11 +23,11 @@ const Main = ({getShows}) => {
             getShows(page).then(res => { setMovies(res.results); dispatch(setShows(res)); })
         }
     }, [page])
-    if(movies.length==0)return<Loader />
+    if (movies.length == 0) return <Loader />
     else return (
         <Container sx={{ py: 8 }} maxWidth="md">
             <Grid container spacing={4}>
-                {movies.filter(movie => movie.name.toLowerCase().includes(searchInput.toLowerCase())).map((movie, index) => { if (index < 18) return <MyCard key={index} id ={ movie.id} name={movie.name} date={movie.first_air_date} original_language={movie.original_language} vote_average={10 * movie.vote_average} img={movie.backdrop_path} /> })}
+                {movies.filter(movie => movie.name.toLowerCase().includes(searchInput.toLowerCase())).map((movie, index) => { if (index < 18) return <MyCard key={index} id={movie.id} name={movie.name} date={movie.first_air_date} original_language={movie.original_language} vote_average={10 * movie.vote_average} img={movie.backdrop_path} /> })}
             </Grid>
             <Pagination count={10} ></Pagination>
         </Container>

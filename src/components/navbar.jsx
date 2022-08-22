@@ -82,8 +82,9 @@ export default function Navbar({ setMode, mode }) {
                 horizontal: 'left',
               }}
             >
-              <MenuItem >Profile</MenuItem>
-              <MenuItem >My Favourites</MenuItem>
+              <Link to='/tvShows'>
+                <MenuItem >Home</MenuItem>
+              </Link>
               <MenuItem >
                 <ListItemIcon>
                   <ModeNight />
@@ -93,16 +94,16 @@ export default function Navbar({ setMode, mode }) {
             </Menu>
             <MenuIcon />
           </IconButton>
-          <Box sx={{width : "100%"}}>
-          <Link to='/TVShows'>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, cursor:"pointer", display: { xs: 'none', sm: 'block' } }}>
-            Tv Show App
-          </Typography>
-          </Link>
+          <Box sx={{ width: "100%" }}>
+            <Link to='/TVShows'>
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ flexGrow: 1, cursor: "pointer", display: { xs: 'none', sm: 'block' } }}>
+                Tv Show App
+              </Typography>
+            </Link>
           </Box>
           <Search>
             <SearchIconWrapper>

@@ -6,6 +6,8 @@ import CircularProgress, {
 } from '@mui/material/CircularProgress';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
+// this component is used to show the loading progress of the page
+
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   borderRadius: 5,
@@ -54,7 +56,7 @@ function FacebookCircularProgress(props) {
 
 export default function Loader() {
   return (
-    <Box sx={{ flexGrow: 1 ,display:"flex", justifyContent:"center",alignItems:'center', height:"300px" }}>
+    <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center", alignItems: 'center', height: "300px" }}>
       <FacebookCircularProgress />
     </Box>
   );

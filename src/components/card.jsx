@@ -31,12 +31,12 @@ const MyCard = ({ name, date, original_language, vote_average, img, id }) => {
           </Typography>
         </CardContent>
         <CardActions sx={{ justifyContent: "space-between", cursor: "pointer" }}>
-          <Link to="/TVShow" state={{id}}>
-          <Button size="small">View</Button>
-        </Link>
-        <CircularStatic value={vote_average} />
-      </CardActions>
-    </Card>
+          <Link to="/TVShow" state={{ id }}>
+            <Button size="small">View</Button>
+          </Link>
+          <CircularStatic value={vote_average} />
+        </CardActions>
+      </Card>
     </Grid >
   )
 }

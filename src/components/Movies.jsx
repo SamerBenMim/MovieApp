@@ -1,14 +1,13 @@
 import { Box, Button, CardActions, CardContent, CardMedia, Checkbox, Grid, IconButton, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import MyCard from './card';
-
 import React, { useEffect, useState } from 'react'
 import Pagination from './Utils/Pagination';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux/es/exports';
 import { setmovies } from '../Redux/Reducers/moviesReducer';
 import Loader from './Utils/Loader';
-const Main = ({getShows}) => {
+const Main = ({ getShows }) => {
     const [movies, setMovies] = useState([]);
     const { searchInput } = useSelector((state) => state.search)
     const { page } = useSelector((state) => state.pagination)
@@ -23,7 +22,7 @@ const Main = ({getShows}) => {
             getShows(page).then(res => { setMovies(res.results); dispatch(setmovies(res)); })
         }
     }, [page])
-    if(movies.length==0)return<Loader />
+    if (movies.length == 0) return <Loader />
     else return (
         <Container sx={{ py: 8 }} maxWidth="md">
             <Grid container spacing={4}>

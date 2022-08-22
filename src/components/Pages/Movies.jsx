@@ -3,7 +3,7 @@ import Description from '../Description'
 import Footer from '../Footer'
 import Movies from '../Movies'
 import { getMovies } from '../../API/getMovies';
-
+// the main page that contain the description and the movies
 const MoviesPage = () => {
   return (
     <>

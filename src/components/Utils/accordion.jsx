@@ -5,6 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+// the accordion is a Mui componenet which is a wrapper for the material-ui Accordion component it get an array of objects as props and each object has a title and a content ....
 export default function ControlledAccordions({ epsiodes }) {
     const [expanded, setExpanded] = React.useState(false);
 
@@ -17,7 +18,7 @@ export default function ControlledAccordions({ epsiodes }) {
             {epsiodes.map((saison, index) =>
                 saison.episodes.map((episode, id) => {
                     return (
-                        <Accordion expanded={expanded === id + '' + index + ''} onChange={handleChange(id + '' + index + '')}>
+                        <Accordion expanded={expanded === id + '' + index + ''} onChange={handleChange(id + '' + index + '')} key={id + '' + index + ''}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel2bh-content"
