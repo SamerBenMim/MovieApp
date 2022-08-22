@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/Movies" element={<Movies />} />
           <Route exact path="/tvshow" element={<TVShow />} />
           <Route path="/TvShows" element={<Tv />} />
-          <Route path="/" element={<Tv />} />
+          <Route path="*" element={<Tv />} />
         </Routes>
       </Router>
     </ThemeProvider>
