@@ -2,7 +2,7 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Checkbox, Grid,
 import { Container } from '@mui/system'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Favorite } from '@mui/icons-material'
-
+import PropTypes from 'prop-types';
 
 import React from 'react'
 import CircularStatic from './Utils/CircularProgress';
@@ -40,5 +40,14 @@ const MyCard = ({ name, date, original_language, vote_average, img, id }) => {
     </Grid >
   )
 }
+MyCard.propTypes = {
+  name: PropTypes.string,
+  date: PropTypes.string,
+  original_language: PropTypes.string,
+  vote_average: PropTypes.number,
+  img: PropTypes.string,
+  id: PropTypes.string
+}
+
 
 export default MyCard
