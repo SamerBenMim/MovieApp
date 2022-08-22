@@ -23,9 +23,10 @@ function App() {
       <Router>
         <Navbar setMode={setMode} mode={mode} />
         <Routes>
-          <Route exact path="/TvShows" element={<Tv />} />
           <Route exact path="/Movies" element={<Movies />} />
           <Route exact path="/tvshow" element={<TVShow />} />
+          <Route path="/TvShows" element={<Tv />} />
+          <Route path="/" element={<Tv />} />
         </Routes>
       </Router>
     </ThemeProvider>

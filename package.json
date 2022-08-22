@@ -1,5 +1,5 @@
 {
-  "homepage": "http://SamerBenMim.github.io/Tv-show/TvShows",
+  "homepage": "http://SamerBenMim.github.io/Tv-show",
   "name": "tv_show",
   "version": "0.1.0",
   "private": true,
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
