@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Tv-show/TvShows/static/css/main.4235cbf2.css",
-    "main.js": "/Tv-show/TvShows/static/js/main.d6bf153c.js",
-    "static/js/787.1015de35.chunk.js": "/Tv-show/TvShows/static/js/787.1015de35.chunk.js",
-    "index.html": "/Tv-show/TvShows/index.html",
-    "main.4235cbf2.css.map": "/Tv-show/TvShows/static/css/main.4235cbf2.css.map",
-    "main.d6bf153c.js.map": "/Tv-show/TvShows/static/js/main.d6bf153c.js.map",
-    "787.1015de35.chunk.js.map": "/Tv-show/TvShows/static/js/787.1015de35.chunk.js.map"
+    "main.css": "/Tv-show/static/css/main.4235cbf2.css",
+    "main.js": "/Tv-show/static/js/main.84136ea5.js",
+    "static/js/787.1015de35.chunk.js": "/Tv-show/static/js/787.1015de35.chunk.js",
+    "index.html": "/Tv-show/index.html",
+    "main.4235cbf2.css.map": "/Tv-show/static/css/main.4235cbf2.css.map",
+    "main.84136ea5.js.map": "/Tv-show/static/js/main.84136ea5.js.map",
+    "787.1015de35.chunk.js.map": "/Tv-show/static/js/787.1015de35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4235cbf2.css",
-    "static/js/main.d6bf153c.js"
+    "static/js/main.84136ea5.js"
   ]
 }
