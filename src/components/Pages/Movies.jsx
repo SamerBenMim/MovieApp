@@ -1,12 +1,17 @@
 import React from 'react'
 import Description from '../Description'
+import Footer from '../Footer'
+import Movies from '../Movies'
+import { getMovies } from '../../API/getMovies';
 
-const Movies = () => {
+const MoviesPage = () => {
   return (
     <>
-    <Description Shows={false} />
+      <Description Shows={false} />
+      <Movies  getShows={getMovies}/>
+      <Footer />
     </>
   )
 }
 
-export default Movies
+export default MoviesPage

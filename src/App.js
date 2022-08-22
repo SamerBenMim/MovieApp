@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Description from './components/Description';
-import Main from './components/Main';
+import TvShows from './components/TvShows';
 import { useState } from 'react';
 import Footer from './components/Footer';
 import Movies from './components/Pages/Movies';
