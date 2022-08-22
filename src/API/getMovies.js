@@ -23,3 +23,13 @@ export const getMovies = async (page) => {
             console.log(err)
         });
 }
+export const getTvShowById = async (id) => {
+    
+    return await axios.get(`${api}/tv/${id}`, { params: { api_key: apiKey,append_to_response:"season/1,season/2,season/3,season/4,season/5,season/6" } })
+        .then(res => {
+            return res.data;
+        })
+        .catch(err => {
+            console.log(err)
+        });
+}

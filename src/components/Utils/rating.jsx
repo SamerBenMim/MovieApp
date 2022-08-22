@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 
 export default function BasicRating({ rating }) {
-  const [value, setValue] = React.useState(rating);
 
   return (
     <Box
@@ -13,11 +12,8 @@ export default function BasicRating({ rating }) {
     >
       <Rating  readOnly
         name="simple-controlled"
-        value={value}
-        precision={0.25}
-        // onChange={(event, newValue) => {
-        //   setValue(newValue);
-        // }}
+        value={rating}
+        precision={0.1}
       />
     </Box>
   );
