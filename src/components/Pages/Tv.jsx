@@ -6,7 +6,7 @@ import { getTvShows } from '../../API/getMovies';
 
 const Tv = () => {
     return (<>
-        <Description  Shows={true}/>
+        <Description  Shows={true}  Tv={false}/>
         <TvShows getShows={getTvShows} />
         <Footer />
     </>

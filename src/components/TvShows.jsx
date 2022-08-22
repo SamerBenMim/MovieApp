@@ -27,7 +27,7 @@ const Main = ({getShows}) => {
     else return (
         <Container sx={{ py: 8 }} maxWidth="md">
             <Grid container spacing={4}>
-                {movies.filter(movie => movie.name.toLowerCase().includes(searchInput.toLowerCase())).map((movie, index) => { if (index < 18) return <MyCard key={index} name={movie.name} date={movie.first_air_date} original_language={movie.original_language} vote_average={10 * movie.vote_average} img={movie.backdrop_path} /> })}
+                {movies.filter(movie => movie.name.toLowerCase().includes(searchInput.toLowerCase())).map((movie, index) => { if (index < 18) return <MyCard key={index} id ={ movie.id} name={movie.name} date={movie.first_air_date} original_language={movie.original_language} vote_average={10 * movie.vote_average} img={movie.backdrop_path} /> })}
             </Grid>
             <Pagination count={10} ></Pagination>
         </Container>

@@ -3,7 +3,7 @@ import { Box, Container, Stack } from '@mui/system'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Description = ({Shows}) => {
+const Description = ({Shows,Tv}) => {
   return (
     <Box
           sx={{
@@ -32,7 +32,7 @@ const Description = ({Shows}) => {
               spacing={2}
               justifyContent="center"
             >
-              <Link  to='/TvShows'><Button variant={Shows?"contained":"outlined"}> TV Shows 2022</Button></Link> 
+              <Link  to='/TvShows'><Button variant={Tv?"outlined":"contained"}> TV Shows 2022</Button></Link> 
               <Link  to='/movies'><Button variant={Shows?"outlined":"contained"}>MOVIES 2022</Button> </Link> 
             </Stack>
           </Container>

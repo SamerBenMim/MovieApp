@@ -7,7 +7,7 @@ import { getMovies } from '../../API/getMovies';
 const MoviesPage = () => {
   return (
     <>
-      <Description Shows={false} />
+      <Description  Shows={false}  Tv={true} />
       <Movies  getShows={getMovies}/>
       <Footer />
     </>

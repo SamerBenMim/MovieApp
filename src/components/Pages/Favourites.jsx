@@ -1,9 +1,9 @@
 import React from 'react'
+import Description from '../Description'
 
 const Movies = () => {
   return (
-    <div>Favourites</div>
-  )
+    <Description Shows={true} Tv={true} />)
 }
 
 export default Movies
