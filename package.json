@@ -1,6 +1,6 @@
 {
-  "homepage": "http://SamerBenMim.github.io/Tv-show",
-  "name": "tv_show",
+  "homepage": "http://SamerBenMim.github.io/MovieApp",
+  "name": "MovieApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
