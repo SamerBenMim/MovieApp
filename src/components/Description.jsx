@@ -2,6 +2,7 @@ import { Button, Typography } from '@mui/material'
 import { Box, Container, Stack } from '@mui/system'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 // these 2 props to distinguish between movies and tv shows
 const Description = ({ Shows, Tv }) => {
@@ -40,5 +41,8 @@ const Description = ({ Shows, Tv }) => {
     </Box>
   )
 }
-
+Description.propTypes = {
+  Tv: PropTypes.string,
+  Shows: PropTypes.string,
+}
 export default Description
